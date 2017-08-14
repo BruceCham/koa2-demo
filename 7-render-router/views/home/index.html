@@ -1,9 +1,10 @@
-{% extends "../common/layout.html" %} {% block body %}
+{% extends "../common/layout.html" %} 
+{% block body %}
 <div class="container">
     <h1>{{content}}</h1>
-    <form action="/signin" method="post">
+    <form action="/login" method="post">
         <div>
-            <label>Email address</label>
+            <label>Name</label>
             <input type="text" name="name" placeholder="name">
             <div>Use name: brucecham</div>
         </div>

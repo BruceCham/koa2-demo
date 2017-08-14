@@ -4,7 +4,7 @@ module.exports = [
     controller: "home.index"
   },
   {
-    match: "/login/:name/:password",
+    match: "/login",
     controller: "home.login",
     method: "post"
   }
