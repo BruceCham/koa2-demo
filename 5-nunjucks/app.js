@@ -40,8 +40,12 @@ let env = createEnv('views',{
   }
 })
 // let test = env.render('hello.html',{name: '<script>alert("小明")</script>'})
-// console.log( test )
-// app.use(BodyParser())
-// app.use(controller())
+let test = env.render('layout-xcx.html',{
+  header: "It's is header!",
+  body: "Bia Bia Bia Bia …"
+})
+console.log( test )
+app.use(BodyParser())
+app.use(controller())
 
-// app.listen(3000)
+app.listen(3000)
