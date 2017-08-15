@@ -1,7 +1,9 @@
 module.exports = {
   index: async function (scope) {
-    scope.title = "首页"
-    scope.content = "this is testjfwopfgjwegw"
+    Object.assign(scope,{
+      title: "首页",
+      content: "正常进入首页 Hello World"
+    })
     await this.render("index")
   },
   login: async function (scope) {
@@ -9,10 +11,16 @@ module.exports = {
     let name = params.name
     let password = params.password
     if (name === "brucecham" && password === "123456") {
-      scope.content = "login success"
+      Object.assign(scope,{
+        title: "登录成功",
+        content: "欢迎进入个人中心"
+      })
       await this.render("success")
     } else {
-      scope.content = "login error"
+      Object.assign(scope,{
+        title: "登录失败",
+        content: "请检查登录信息是否正常"
+      })
       await this.render("error")
     }
   }
