@@ -4,6 +4,7 @@ module.exports = {
       title: "首页",
       content: "正常进入首页 Hello World"
     })
+    console.log(this.say)
     await this.render("index")
   },
   login: async function (scope) {

@@ -1,6 +1,7 @@
 let uuid = require("node-uuid")
 const isProduction = process.env.NODE_ENV === 'production'
 module.exports = () => {
+  console.log("context===================", this)
   return function (context, next) {
     var id = uuid.v4().replace(/-/g, "")
     context.state.scope = {
