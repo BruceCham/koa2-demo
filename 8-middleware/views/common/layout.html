@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/main.css"> {% block head %} {% endblock %}
+</head>
+
+<body>
+    {% include "./header.html" %}
+
+    <div class="banner_box">
+        <div class="banner_inner">
+            <h2 class="slogan">汇聚天下英才</h2>
+            <p class="des">iKcamp是由沪江Web前端团队发起的自由组织<br>我们追随JavaScript这门语言所秉持的精神，为ITer提供完善的在线学习平台和知识体系</p>
+            {% block btn %}
+            {% endblock %}
+        </div>
+    </div>
+    
+    <div class="show_time">
+        <div class="feature-con">
+            <ul class="feature fn-clear">
+                <li class="feature-item"><i class="ico"></i>
+                    <h4 class="tit">免费资源</h4>
+                    <p class="des">为天地立心</p>
+                </li>
+                <li class="feature-item"><i class="ico"></i>
+                    <h4 class="tit">体系知识</h4>
+                    <p class="des">为科技立命</p>
+                </li>
+                <li class="feature-item"><i class="ico"></i>
+                    <h4 class="tit">实战项目</h4>
+                    <p class="des">为大牛继绝学</p>
+                </li>
+                <li class="feature-item"><i class="ico"></i>
+                    <h4 class="tit">线下交流</h4>
+                    <p class="des">为教育开太平</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    {% block body %}
+    <div>
+    </div>
+    {% endblock %} 
+    
+    {% include "./footer.html" %}
+
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

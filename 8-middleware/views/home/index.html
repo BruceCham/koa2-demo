@@ -1,0 +1,22 @@
+{% extends "../common/layout.html" %} 
+
+{% block btn %}
+<a href="/login" title="gogogo" class="btn" id="gogogo">敌军还有<span id="gotimer">5</span>秒到达战场</a>
+{% endblock %}
+
+{% block content %}
+<script>
+    window.onload = function () {
+        var doc = document;
+        setInterval(function () {
+            var domTimer = document.getElementById('gotimer')
+            var curTimer = parseInt(domTimer.innerHTML)
+            if (curTimer == 0) {
+                window.location.href = '/login';
+                return;
+            }
+            domTimer.innerHTML = curTimer - 1;
+        }, 1000)
+    }
+</script>
+{% endblock %}
